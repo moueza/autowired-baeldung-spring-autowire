@@ -1,10 +1,12 @@
 package myPack;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /** 3.1 properties */
 @Component
+@Scope(value = "singleton")/**https://stackoverflow.com/questions/5010219/singleton-and-autowired-returning-null*/
 public class FooService1 {
 	/**
 	 * In the above example, Spring looks for and injects fooFormatter when
